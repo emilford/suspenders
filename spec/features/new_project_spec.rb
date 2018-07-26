@@ -211,12 +211,6 @@ RSpec.describe "Suspend a new project with default configuration" do
     )
   end
 
-  it "configs bullet gem in development" do
-    expect(development_config).to match /^ +Bullet.enable = true$/
-    expect(development_config).to match /^ +Bullet.bullet_logger = true$/
-    expect(development_config).to match /^ +Bullet.rails_logger = true$/
-  end
-
   it "configs missing assets to raise in test" do
     expect(test_config).to match(
       /^ +config.assets.raise_runtime_errors = true$/,
@@ -249,6 +243,13 @@ RSpec.describe "Suspend a new project with default configuration" do
 
   it "copies factories.rb" do
     expect(File).to exist("#{project_path}/spec/factories.rb")
+  end
+
+  it "configures bullet for the test environment" do
+    gemfile = read_project_file("Gemfile")
+
+    expect(gemfile).to match(/bullet/)
+    expect(File).to exist("#{project_path}/spec/support/bullet.rb")
   end
 
   it "creates review apps setup script" do
