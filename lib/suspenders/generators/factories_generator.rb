@@ -7,13 +7,9 @@ module Suspenders
       File.dirname(__FILE__),
     )
 
-    def add_factory_bot
-      gem "factory_bot_rails", group: %i(development test)
-      Bundler.with_clean_env { run "bundle install" }
-    end
-
-    def set_up_factory_bot_for_rspec
-      copy_file "factory_bot_rspec.rb", "spec/support/factory_bot.rb"
+    def set_up_factory_bot
+      copy_file "factory_bot.rb", "spec/support/factory_bot.rb"
+      copy_file "factory_bot.rake", "lib/tasks/factory_bot.rake"
     end
 
     def generate_empty_factories_file

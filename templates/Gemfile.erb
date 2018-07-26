@@ -38,12 +38,14 @@ group :development, :test do
   gem "awesome_print"
   gem "bundler-audit", ">= 0.5.0", require: false
   gem "dotenv-rails"
+  gem "factory_bot_rails"
   gem "pry-byebug"
   gem "pry-rails"
 end
 
 group :test do
   gem "bullet"
+  gem "database_cleaner"
   gem "launchy"
   gem "webmock"
 end
