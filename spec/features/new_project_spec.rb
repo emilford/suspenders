@@ -288,16 +288,10 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(gemfile).to match(/high_voltage/)
   end
 
-  it "adds and configures neat" do
-    gemfile = read_project_file("Gemfile")
-
-    expect(gemfile).to match(/neat/)
-  end
-
-  it "configures neat and bitters" do
+  it "configures bitters" do
     app_css = read_project_file(%w(app assets stylesheets application.scss))
     expect(app_css).to match(
-      /normalize\.css\/normalize.*neat.*base/m,
+      /normalize\.css\/normalize.*base/m,
     )
   end
 
