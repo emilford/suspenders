@@ -157,10 +157,6 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(locales_en_file).to match(/application: #{app_name.humanize}/)
   end
 
-  it "configs simple_form" do
-    expect(File).to exist("#{project_path}/config/initializers/simple_form.rb")
-  end
-
   it "configs :test email delivery method for development" do
     expect(development_config).
       to match(/^ +config.action_mailer.delivery_method = :file$/)
