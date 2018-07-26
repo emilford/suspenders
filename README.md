@@ -32,8 +32,6 @@ generated projectname/Gemfile.
 It includes application gems like:
 
 * [Autoprefixer Rails](https://github.com/ai/autoprefixer-rails) for CSS vendor prefixes
-* [Bourbon](https://github.com/thoughtbot/bourbon) for Sass mixins
-* [Bitters](https://github.com/thoughtbot/bitters) for scaffold application styles
 * [Delayed Job](https://github.com/collectiveidea/delayed_job) for background
   processing
 * [Flutie](https://github.com/thoughtbot/flutie) for `page_title` and `body_class` view
@@ -41,7 +39,6 @@ It includes application gems like:
 * [High Voltage](https://github.com/thoughtbot/high_voltage) for static pages
 * [Honeybadger](https://honeybadger.io) for exception notification
 * [jQuery Rails](https://github.com/rails/jquery-rails) for jQuery
-* [Neat](https://github.com/thoughtbot/neat) for semantic grids
 * [Normalize](https://necolas.github.io/normalize.css/) for resetting browser styles
 * [Postgres](https://github.com/ged/ruby-pg) for access to the Postgres database
 * [Rack Canonical Host](https://github.com/tylerhunt/rack-canonical-host) to

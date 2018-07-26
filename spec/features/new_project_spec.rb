@@ -288,20 +288,6 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(gemfile).to match(/high_voltage/)
   end
 
-  it "adds and configures bourbon and neat" do
-    gemfile = read_project_file("Gemfile")
-
-    expect(gemfile).to match(/bourbon/)
-    expect(gemfile).to match(/neat/)
-  end
-
-  it "configures bourbon, neat, and bitters" do
-    app_css = read_project_file(%w(app assets stylesheets application.scss))
-    expect(app_css).to match(
-      /normalize\.css\/normalize.*bourbon.*neat.*base/m,
-    )
-  end
-
   it "doesn't use turbolinks" do
     app_js = read_project_file(%w(app assets javascripts application.js))
     expect(app_js).not_to match(/turbolinks/)

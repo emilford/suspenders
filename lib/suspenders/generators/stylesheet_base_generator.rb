@@ -7,8 +7,6 @@ module Suspenders
       File.dirname(__FILE__))
 
     def add_stylesheet_gems
-      gem "bourbon", "~> 5.0"
-      gem "neat", "~> 2.1"
       Bundler.with_clean_env { run "bundle install" }
     end
 
@@ -22,10 +20,6 @@ module Suspenders
 
     def remove_prior_config
       remove_file "app/assets/stylesheets/application.css"
-    end
-
-    def install_bitters
-      run "bitters install --path app/assets/stylesheets"
     end
 
     def install_normalize_css
