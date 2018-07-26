@@ -187,7 +187,6 @@ module Suspenders
       unless options[:api]
         generate("suspenders:forms")
       end
-      generate("suspenders:db_optimizations")
       generate("suspenders:factories")
       generate("suspenders:lint")
       generate("suspenders:jobs")
