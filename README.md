@@ -76,8 +76,6 @@ And testing gems like:
   [Google Chromedriver]
   integration testing
 * [Factory Bot](https://github.com/thoughtbot/factory_bot) for test data
-* [Formulaic](https://github.com/thoughtbot/formulaic) for integration testing
-  HTML forms
 * [RSpec](https://github.com/rspec/rspec) for unit testing
 * [RSpec Mocks](https://github.com/rspec/rspec-mocks) for stubbing and spying
 * [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) for common
