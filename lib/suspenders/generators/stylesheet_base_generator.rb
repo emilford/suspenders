@@ -22,10 +22,6 @@ module Suspenders
       remove_file "app/assets/stylesheets/application.css"
     end
 
-    def install_bitters
-      run "bitters install --path app/assets/stylesheets"
-    end
-
     def install_normalize_css
       run "bin/yarn add normalize.css"
     end
