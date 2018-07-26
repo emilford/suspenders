@@ -1,7 +1,4 @@
 if ENV.fetch("COVERAGE", false)
-  require "simplecov"
-
-  SimpleCov.start "rails"
 end
 
 require "webmock/rspec"
