@@ -248,6 +248,10 @@ RSpec.describe "Suspend a new project with default configuration" do
     expect(File).to exist("#{project_path}/spec/support/bullet.rb")
   end
 
+  it "configures time helpers for the test environment" do
+    expect(File).to exist("#{project_path}/spec/support/time_helpers.rb")
+  end
+
   it "creates review apps setup script" do
     bin_setup_path = "#{project_path}/bin/setup_review_app"
     bin_setup = IO.read(bin_setup_path)
@@ -288,11 +292,6 @@ RSpec.describe "Suspend a new project with default configuration" do
   it "doesn't use turbolinks" do
     app_js = read_project_file(%w(app assets javascripts application.js))
     expect(app_js).not_to match(/turbolinks/)
-  end
-
-  it "configures Timecop safe mode" do
-    spec_helper = read_project_file(%w(spec spec_helper.rb))
-    expect(spec_helper).to match(/Timecop.safe_mode = true/)
   end
 
   def development_config
