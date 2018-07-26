@@ -320,7 +320,7 @@ you can deploy to staging and production with:
       append_file 'Rakefile' do
         <<-EOS
 task(:default).clear
-task default: [:spec]
+task default: ["factory_bot:lint", :spec]
 
 if defined? RSpec
   task(:spec).clear
