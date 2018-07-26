@@ -46,6 +46,10 @@ module Suspenders
       copy_file "bullet.rb", "spec/support/bullet.rb"
     end
 
+    def configure_time_helpers
+      copy_file "time_helpers.rb", "spec/support/time_helpers.rb"
+    end
+
     def configure_action_mailer_in_specs
       copy_file "action_mailer.rb", "spec/support/action_mailer.rb"
     end
