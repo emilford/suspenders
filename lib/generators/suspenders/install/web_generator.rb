@@ -55,7 +55,7 @@ module Suspenders
 
           # suspenders:jobs needs to be invoked before suspenders:styles, since
           # suspenders:styles generator creates Procfile.dev
-          generate "suspenders:styles"
+          # generate "suspenders:styles"
           generate "suspenders:jobs"
 
           # Needs to run after other generators, since some touch the
